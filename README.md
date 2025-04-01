@@ -45,7 +45,7 @@ The comparison focuses on key factors relevant to mail server operations, includ
 ## VPS and Dedicated Mail Server Provider Comparison Table
 
 > \[!NOTE]
-> [Vultr][] and [Hetzner][] have been removed from this list since they block port 25. See issues [#1](https://github.com/forwardemail/awesome-mail-server-providers/issues/1) and [#2](https://github.com/forwardemail/awesome-mail-server-providers/issues/2) for more insight.
+> [Vultr][] and [Hetzner][] have been removed from this list since they block port 25 (see [#1](https://github.com/forwardemail/awesome-mail-server-providers/issues/1) and [#2](https://github.com/forwardemail/awesome-mail-server-providers/issues/2)).
 
 | Provider         | Lowest Price | RAM Range    | vCPU Range | Storage Range   | Transfer  | Reverse PTR | IPv6 | Port 25                         | Security History                      |
 | ---------------- | ------------ | ------------ | ---------- | --------------- | --------- | ----------- | ---- | ------------------------------- | ------------------------------------- |
