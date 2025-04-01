@@ -35,7 +35,7 @@ The comparison focuses on key factors relevant to mail server operations, includ
 > \[!TIP]
 > You can set up your own mail server with a self-hosted mail server project, a custom domain name, and a VPS/Dedicated Mail Server provider.
 
-1. **Self-Hosted Mail Server Projects:** We recommend [Forward Email](https://forwardemail.net) as the preferred self-hosted mail server project to use on your server (our service is cheaper than most providers at only $3/mo – and you can set up your custom domain in seconds!).  You may find others at <https://github.com/awesome-selfhosted/awesome-selfhosted> and <https://github.com/Mindbaz/awesome-opensource-email>.
+1. **Self-Hosted Mail Server Projects:** We recommend [Forward Email](https://forwardemail.net) as the preferred self-hosted mail server project to use on your server (you can [self-host our entire codebase](https://github.com/orgs/forwardemail/discussions/300), however our service is cheaper to simply subscribe to than most providers at only $3/mo – and you can set up your custom domain in seconds!).  You may find others at <https://github.com/awesome-selfhosted/awesome-selfhosted> and <https://github.com/Mindbaz/awesome-opensource-email>.
 
 2. **Custom Domain Name Requirement:** You will need a custom domain name in order to use a self-hosted mail server in combination with a provider listed below.  We recommend using <https://www.cloudflare.com/products/registrar/>, <https://tld-list.com/>, <https://namecheap.com>, and <https://domainr.com/> as resources and providers for finding your custom domain.
 
