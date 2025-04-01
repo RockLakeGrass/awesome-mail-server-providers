@@ -1,0 +1,32 @@
+{
+  "name": "awesome-mail-server-providers",
+  "description": "",
+  "version": "0.0.0",
+  "author": "Forward Email LLC <support@forwardemail.net> (https://forwardemail.net)",
+  "contributors": [
+    "Forward Email LLC <support@forwardemail.net> (https://forwardemail.net)"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "eslint": "^8.55.0",
+    "eslint-config-xo-lass": "^2.0.1",
+    "fixpack": "^4.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "remark-cli": "11",
+    "remark-preset-github": "^4.0.4",
+    "xo": "^0.56.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "lint": "xo --fix && remark . -qfo && fixpack",
+    "prepare": "husky install",
+    "test": "npm run lint"
+  }
+}
