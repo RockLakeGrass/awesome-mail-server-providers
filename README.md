@@ -45,13 +45,15 @@ The comparison focuses on key factors relevant to mail server operations, includ
 ## VPS and Dedicated Mail Server Provider Comparison Table
 
 > \[!NOTE]
-> [Vultr][] and [Hetzner][] have been removed from this list since they block port 25 (see [#1](https://github.com/forwardemail/awesome-mail-server-providers/issues/1) and [#2](https://github.com/forwardemail/awesome-mail-server-providers/issues/2)).
+> [Vultr][] and [Hetzner][] block port 25 by default for new accounts. Vultr can unblock it via a support ticket request. Hetzner requires ~1 month of account history before submitting a limit request (see [#1](https://github.com/forwardemail/awesome-mail-server-providers/issues/1) and [#2](https://github.com/forwardemail/awesome-mail-server-providers/issues/2) for more details).
 
-| Provider         | Lowest Price | RAM Range    | vCPU Range | Storage Range   | Transfer  | Reverse PTR | IPv6 | Port 25                         | Security History                      |
-| ---------------- | ------------ | ------------ | ---------- | --------------- | --------- | ----------- | ---- | ------------------------------- | ------------------------------------- |
-| [DigitalOcean][] | $5/mo        | 1GB-64GB+    | 1-32+      | 25GB-1TB+ SSD   | 1TB-10TB+ | Yes         | Yes  | Blocked by default, can request | No major breaches                     |
-| [Linode][]       | $5/mo        | 1GB-64GB+    | 1-32+      | 25GB-1TB+ SSD   | 1TB-10TB+ | Yes         | Yes  | Open by default                 | Multiple breaches (2013, 2016)        |
-| [RackNerd][]     | $11/yr       | 0.75GB-32GB+ | 1-16+      | 12GB-500GB+ SSD | 1TB-10TB+ | Yes         | Yes  | Open by default                 | No major incidents                    |
+| Provider         | Lowest Price | RAM Range    | vCPU Range | Storage Range   | Transfer    | Reverse PTR | IPv6 | Port 25                         | Security History                      |
+| ---------------- | ------------ | ------------ | ---------- | --------------- | ----------- | ----------- | ---- | ------------------------------- | ------------------------------------- |
+| [Vultr][]        | $2.50/mo     | 512MB-64GB+  | 1-32+      | 10GB-1TB+ SSD   | 0.5TB-10TB+ | Yes         | Yes  | Blocked by default, can request | No major incidents                    |
+| [DigitalOcean][] | $5/mo        | 1GB-64GB+    | 1-32+      | 25GB-1TB+ SSD   | 1TB-10TB+   | Yes         | Yes  | Blocked by default, can request | No major breaches                     |
+| [Linode][]       | $5/mo        | 1GB-64GB+    | 1-32+      | 25GB-1TB+ SSD   | 1TB-10TB+   | Yes         | Yes  | Open by default                 | Multiple breaches (2013, 2016)        |
+| [Hetzner][]      | €3.70/mo     | 2GB-64GB+    | 1-32+      | 20GB-1TB+ SSD   | 20TB-30TB+  | Yes         | Yes  | Blocked by default, can request | No major breaches                     |
+| [RackNerd][]     | $11/yr       | 0.75GB-32GB+ | 1-16+      | 12GB-500GB+ SSD | 1TB-10TB+   | Yes         | Yes  | Open by default                 | No major incidents                    |
 | [DataPacket][]   | $5/mo        | 1GB-64GB+    | 1-32+      | 25GB-1TB+ SSD   | 2TB-20TB+ | Yes         | Yes  | Open by default                 | No major incidents                    |
 | [DartNode][]     | $2.95/mo     | 1GB-32GB+    | 1-16+      | 20GB-500GB+ SSD | Unlimited | Yes         | Yes  | Open by default                 | No major incidents, newer provider    |
 | [UltaHost][]     | $3.99/mo     | 1GB-32GB+    | 1-16+      | 20GB-500GB+ SSD | 1TB-10TB+ | Yes         | Yes  | Open, 200 emails/hour limit     | No major incidents                    |
@@ -76,8 +78,10 @@ All providers in this comparison support configurable reverse PTR records, which
 
 | Provider         | PTR Record Configuration    | Notes                       |
 | ---------------- | --------------------------- | --------------------------- |
+| [Vultr][]        | Via control panel           | Easy to configure           |
 | [DigitalOcean][] | Via control panel           | Simple interface            |
 | [Linode][]       | Via control panel           | Well-documented process     |
+| [Hetzner][]      | Via control panel           | Straightforward setup       |
 | [RackNerd][]     | Via control panel           | Quick configuration         |
 | [DataPacket][]   | Via control panel           | Standard process            |
 | [DartNode][]     | Directly on network manager | Unique direct configuration |
@@ -100,8 +104,10 @@ All providers in this comparison offer IPv6 support on all their plans, which is
 
 | Provider         | IPv6 Implementation | Notes                     |
 | ---------------- | ------------------- | ------------------------- |
+| [Vultr][]        | Full support        | Native implementation     |
 | [DigitalOcean][] | Full support        | Available on all droplets |
 | [Linode][]       | Full support        | Well-integrated           |
+| [Hetzner][]      | Full support        | Reliable implementation   |
 | [RackNerd][]     | Full support        | Standard implementation   |
 | [DataPacket][]   | Full support        | Comprehensive support     |
 | [DartNode][]     | Full support        | Modern implementation     |
@@ -115,11 +121,13 @@ All providers in this comparison offer IPv6 support on all their plans, which is
 
 Port 25 is the standard SMTP port used for email transmission. Many providers block or restrict this port to prevent spam. This is a critical consideration for mail server hosting:
 
-| Provider         | Port 25 Status     | Email Sending Limits | Notes                                                           |
-| ---------------- | ------------------ | -------------------- | --------------------------------------------------------------- |
-| [DigitalOcean][] | Blocked by default | Varies by plan       | Can be opened by contacting support with business justification |
-| [Linode][]       | Open by default    | No specific limits   | Subject to anti-spam monitoring                                 |
-| [RackNerd][]     | Open by default    | Unlimited            | No restrictions mentioned                                       |
+| Provider         | Port 25 Status     | Email Sending Limits | Notes                                                                       |
+| ---------------- | ------------------ | -------------------- | --------------------------------------------------------------------------- |
+| [Vultr][]        | Blocked by default | Varies by plan       | Can be unblocked via support ticket                                         |
+| [DigitalOcean][] | Blocked by default | Varies by plan       | Can be opened by contacting support with business justification             |
+| [Linode][]       | Open by default    | No specific limits   | Subject to anti-spam monitoring                                             |
+| [Hetzner][]      | Blocked by default | No specific limits   | Can be unblocked after ~1 month via limit request                           |
+| [RackNerd][]     | Open by default    | Unlimited            | No restrictions mentioned                                                   |
 | [DataPacket][]   | Open by default    | No specific limits   | Subject to anti-abuse monitoring                                |
 | [DartNode][]     | Open by default    | Unlimited            | No restrictions mentioned                                       |
 | [UltaHost][]     | Open by default    | 200 emails/hour      | Moderate sending limit                                          |
@@ -133,11 +141,13 @@ Port 25 is the standard SMTP port used for email transmission. Many providers bl
 
 Geographic distribution of servers is important for mail delivery speed and compliance with regional data regulations:
 
-| Provider         | North America | Europe                 | Asia       | Australia | South America | Africa |
-| ---------------- | ------------- | ---------------------- | ---------- | --------- | ------------- | ------ |
-| [DigitalOcean][] | US (3), CA    | NL, UK, DE             | IN, SG     | AU        | -             | ZA     |
-| [Linode][]       | US (6), CA    | UK, DE, NL, SE, PL, IT | JP, SG, IN | AU        | -             | ZA     |
-| [RackNerd][]     | US (6), CA    | NL                     | -          | -         | -             | -      |
+| Provider         | North America        | Europe                 | Asia       | Australia | South America | Africa |
+| ---------------- | -------------------- | ---------------------- | ---------- | --------- | ------------- | ------ |
+| [Vultr][]        | US (9 locations), CA | UK, NL, FR, DE, PL     | JP, SG, KR | AU (2)    | BR            | -      |
+| [DigitalOcean][] | US (3), CA           | NL, UK, DE             | IN, SG     | AU        | -             | ZA     |
+| [Linode][]       | US (6), CA           | UK, DE, NL, SE, PL, IT | JP, SG, IN | AU        | -             | ZA     |
+| [Hetzner][]      | US (2)               | DE (3), FI             | SG         | -         | -             | -      |
+| [RackNerd][]     | US (6), CA           | NL                     | -          | -         | -             | -      |
 | [DataPacket][]   | US (3)        | NL, DE, UK, CZ, PL     | SG, JP     | AU        | BR            | -      |
 | [DartNode][]     | US (TX)       | -                      | -          | -         | -             | -      |
 | [UltaHost][]     | US (2)        | DE, NL, UK             | SG         | AU        | -             | -      |
@@ -153,8 +163,10 @@ Geographic distribution of servers is important for mail delivery speed and comp
 
 | Provider         | Entry Price | RAM    | vCPU | Storage  | Transfer  |
 | ---------------- | ----------- | ------ | ---- | -------- | --------- |
+| [Vultr][]        | $2.50/mo    | 512MB  | 1    | 10GB SSD | 0.5TB     |
 | [DigitalOcean][] | $5/mo       | 1GB    | 1    | 25GB SSD | 1TB       |
 | [Linode][]       | $5/mo       | 1GB    | 1    | 25GB SSD | 1TB       |
+| [Hetzner][]      | €3.70/mo    | 2GB    | 1    | 20GB SSD | 20TB      |
 | [RackNerd][]     | $11/yr      | 0.75GB | 1    | 12GB SSD | 1TB       |
 | [DataPacket][]   | $5/mo       | 1GB    | 1    | 25GB SSD | 2TB       |
 | [DartNode][]     | $2.95/mo    | 1GB    | 1    | 20GB SSD | Unlimited |
@@ -168,8 +180,10 @@ Geographic distribution of servers is important for mail delivery speed and comp
 
 | Provider         | Mid-Range Price | RAM   | vCPU | Storage   | Transfer  |
 | ---------------- | --------------- | ----- | ---- | --------- | --------- |
+| [Vultr][]        | $10/mo          | 2GB   | 1    | 55GB SSD  | 2TB       |
 | [DigitalOcean][] | $15/mo          | 2GB   | 2    | 60GB SSD  | 3TB       |
 | [Linode][]       | $20/mo          | 4GB   | 2    | 80GB SSD  | 4TB       |
+| [Hetzner][]      | €11.83/mo       | 8GB   | 2    | 80GB SSD  | 20TB      |
 | [RackNerd][]     | $24/yr          | 2.5GB | 3    | 40GB SSD  | 6.5TB     |
 | [DataPacket][]   | $20/mo          | 4GB   | 2    | 80GB SSD  | 10TB      |
 | [DartNode][]     | $9.95/mo        | 4GB   | 2    | 80GB SSD  | Unlimited |
@@ -186,8 +200,10 @@ Security history is a critical consideration when choosing a VPS provider for ma
 
 | Provider         | Major Security Incidents       | Notes                                                                                                            |
 | ---------------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------- |
+| [Vultr][]        | None publicly reported         | Good reputation for security                                                                                     |
 | [DigitalOcean][] | None publicly reported         | Some reported incidents of account suspensions without warning                                                   |
 | [Linode][]       | Multiple breaches (2013, 2016) | 2013: Credit card and password leak; 2016: User credentials found on external machine; DDoS attacks in 2015/2016 |
+| [Hetzner][]      | None publicly reported         | Good reputation for security                                                                                     |
 | [RackNerd][]     | None publicly reported         | Relatively newer provider compared to others                                                                     |
 | [DataPacket][]   | None publicly reported         | Maintains strong network security practices                                                                      |
 | [DartNode][]     | None publicly reported         | Relatively new provider with limited public security history                                                     |
