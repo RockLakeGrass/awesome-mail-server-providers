@@ -45,7 +45,7 @@ The comparison focuses on key factors relevant to mail server operations, includ
 ## VPS and Dedicated Mail Server Provider Comparison Table
 
 > \[!NOTE]
-> [Vultr][] and [Hetzner][] block port 25 by default for new accounts. Vultr can unblock it via a support ticket request. Hetzner requires ~1 month of account history before submitting a limit request (see [#1](https://github.com/forwardemail/awesome-mail-server-providers/issues/1) and [#2](https://github.com/forwardemail/awesome-mail-server-providers/issues/2) for more details).
+> [Vultr][] [Interserver][]and [Hetzner][] block port 25 by default for new accounts. Vultr and Interserver can unblock it via a support ticket request. Hetzner requires ~1 month of account history before submitting a limit request (see [#1](https://github.com/forwardemail/awesome-mail-server-providers/issues/1) and [#2](https://github.com/forwardemail/awesome-mail-server-providers/issues/2) for more details).
 
 | Provider         | Lowest Price | RAM Range    | vCPU Range | Storage Range   | Transfer    | Reverse PTR | IPv6 | Port 25                         | Security History                      |
 | ---------------- | ------------ | ------------ | ---------- | --------------- | ----------- | ----------- | ---- | ------------------------------- | ------------------------------------- |
@@ -56,6 +56,7 @@ The comparison focuses on key factors relevant to mail server operations, includ
 | [RackNerd][]     | $11/yr       | 0.75GB-32GB+ | 1-16+      | 12GB-500GB+ SSD | 1TB-10TB+   | Yes         | Yes  | Open by default                 | No major incidents                    |
 | [DataPacket][]   | $5/mo        | 1GB-64GB+    | 1-32+      | 25GB-1TB+ SSD   | 2TB-20TB+ | Yes         | Yes  | Open by default                 | No major incidents                    |
 | [DartNode][]     | $2.95/mo     | 1GB-32GB+    | 1-16+      | 20GB-500GB+ SSD | Unlimited | Yes         | Yes  | Open by default                 | No major incidents, newer provider    |
+| [Interserver][]  | $3/mo        | 2GB-64GB     | 1-16+      | 40GB-1TB+ SSD   | 2TB-64TB | Yes         | Yes  |  Blocked by default, can request | No major incidents,     |
 | [UltaHost][]     | $3.99/mo     | 1GB-32GB+    | 1-16+      | 20GB-500GB+ SSD | 1TB-10TB+ | Yes         | Yes  | Open, 200 emails/hour limit     | No major incidents                    |
 | [Contabo][]      | €4.99/mo     | 4GB-64GB+    | 2-32+      | 50GB-1TB+ SSD   | Unlimited | Yes         | Yes  | Open, 25 emails/minute limit    | No major incidents                    |
 | [Hostinger][]    | $3.99/mo     | 1GB-32GB+    | 1-16+      | 20GB-500GB+ SSD | 1TB-10TB+ | Yes         | Yes  | Open, 5 emails/minute limit     | 2020 breach (shared hosting)          |
@@ -85,6 +86,7 @@ All providers in this comparison support configurable reverse PTR records, which
 | [RackNerd][]     | Via control panel           | Quick configuration         |
 | [DataPacket][]   | Via control panel           | Standard process            |
 | [DartNode][]     | Directly on network manager | Unique direct configuration |
+| [Interserver][]  | Via control panel           | Easy to configure
 | [UltaHost][]     | Via control panel           | User-friendly interface     |
 | [Contabo][]      | Via control panel           | Well-documented             |
 | [Hostinger][]    | Via control panel           | Simple process              |
@@ -111,6 +113,7 @@ All providers in this comparison offer IPv6 support on all their plans, which is
 | [RackNerd][]     | Full support        | Standard implementation   |
 | [DataPacket][]   | Full support        | Comprehensive support     |
 | [DartNode][]     | Full support        | Modern implementation     |
+| [Interserver][]  | Full Support        | Standard implementation
 | [UltaHost][]     | Full support        | Standard implementation   |
 | [Contabo][]      | Full support        | Well-documented           |
 | [Hostinger][]    | Full support        | Standard implementation   |
@@ -130,6 +133,7 @@ Port 25 is the standard SMTP port used for email transmission. Many providers bl
 | [RackNerd][]     | Open by default    | Unlimited            | No restrictions mentioned                                                   |
 | [DataPacket][]   | Open by default    | No specific limits   | Subject to anti-abuse monitoring                                |
 | [DartNode][]     | Open by default    | Unlimited            | No restrictions mentioned                                       |
+| [Interserver][]  | Blocked by default | Unlimited            | No restrictions mentioned   
 | [UltaHost][]     | Open by default    | 200 emails/hour      | Moderate sending limit                                          |
 | [Contabo][]      | Open by default    | 25 emails/minute     | Reasonable sending limit                                        |
 | [Hostinger][]    | Open by default    | 5 emails/minute      | Very restrictive sending limit                                  |
@@ -150,6 +154,7 @@ Geographic distribution of servers is important for mail delivery speed and comp
 | [RackNerd][]     | US (6), CA           | NL                     | -          | -         | -             | -      |
 | [DataPacket][]   | US (3)        | NL, DE, UK, CZ, PL     | SG, JP     | AU        | BR            | -      |
 | [DartNode][]     | US (TX)       | -                      | -          | -         | -             | -      |
+| [Interserver][]  | US (9)        | -                      | -          | -         | -             | -      |
 | [UltaHost][]     | US (2)        | DE, NL, UK             | SG         | AU        | -             | -      |
 | [Contabo][]      | US (2)        | DE (2), UK, ES         | SG, JP     | AU        | -             | -      |
 | [Hostinger][]    | US            | UK, NL, LT             | SG         | -         | BR            | -      |
@@ -170,6 +175,7 @@ Geographic distribution of servers is important for mail delivery speed and comp
 | [RackNerd][]     | $11/yr      | 0.75GB | 1    | 12GB SSD | 1TB       |
 | [DataPacket][]   | $5/mo       | 1GB    | 1    | 25GB SSD | 2TB       |
 | [DartNode][]     | $2.95/mo    | 1GB    | 1    | 20GB SSD | Unlimited |
+| [Interserver][]  | $3/mo       | 2GB    | 1    | 40GB SSD | 2TB |
 | [UltaHost][]     | $3.99/mo    | 1GB    | 1    | 20GB SSD | 1TB       |
 | [Contabo][]      | €4.99/mo    | 4GB    | 2    | 50GB SSD | Unlimited |
 | [Hostinger][]    | $3.99/mo    | 1GB    | 1    | 20GB SSD | 1TB       |
@@ -187,6 +193,7 @@ Geographic distribution of servers is important for mail delivery speed and comp
 | [RackNerd][]     | $24/yr          | 2.5GB | 3    | 40GB SSD  | 6.5TB     |
 | [DataPacket][]   | $20/mo          | 4GB   | 2    | 80GB SSD  | 10TB      |
 | [DartNode][]     | $9.95/mo        | 4GB   | 2    | 80GB SSD  | Unlimited |
+| [Interserver][]  | $15/mo          | 10GB  | 3    | 200GB SSD | 10TB      |
 | [UltaHost][]     | $15.99/mo       | 4GB   | 2    | 80GB SSD  | 4TB       |
 | [Contabo][]      | €8.99/mo        | 8GB   | 4    | 200GB SSD | Unlimited |
 | [Hostinger][]    | $8.99/mo        | 4GB   | 2    | 80GB SSD  | 4TB       |
@@ -207,6 +214,7 @@ Security history is a critical consideration when choosing a VPS provider for ma
 | [RackNerd][]     | None publicly reported         | Relatively newer provider compared to others                                                                     |
 | [DataPacket][]   | None publicly reported         | Maintains strong network security practices                                                                      |
 | [DartNode][]     | None publicly reported         | Relatively new provider with limited public security history                                                     |
+| [Interserver][]  | None publicly reported         | Good reputation for security   
 | [UltaHost][]     | None publicly reported         | Regular security updates and monitoring                                                                          |
 | [Contabo][]      | None publicly reported         | Strong reputation for security practices                                                                         |
 | [Hostinger][]    | 2020 data breach               | Affected shared hosting database, VPS services reportedly not affected                                           |
@@ -223,6 +231,8 @@ Security history is a critical consideration when choosing a VPS provider for ma
 2. **[Contabo][]**: Provides exceptional value with generous resources (4GB RAM at entry level), open port 25 with reasonable sending limits, and strong security history.
 
 3. **[Linode][]**: Despite past security incidents, offers reliable mail server support with open port 25 by default and excellent documentation.
+
+4.  **[Interserver][]**: Offers affordable VPS hosting with IPv6 support, reverse DNS management, and mail server–friendly infrastructure.
 
 ### Best Budget Options
 
@@ -286,6 +296,8 @@ Our team uses [DataPacket][] and previously used [DigitalOcean][] and [Vultr][].
 [datapacket]: https://www.datapacket.com/?ref=forwardemail_dot_net
 
 [dartnode]: https://dartnode.com/?ref=forwardemail_dot_net
+
+[interserver]: https://www.interserver.net/?ref=forwardemail_dot_net
 
 [ultahost]: https://ultahost.com/?ref=forwardemail_dot_net
 
