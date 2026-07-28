@@ -119,7 +119,7 @@ All providers in this comparison offer IPv6 support on all their plans, which is
 | [UltaHost][]     | Full support        | Standard implementation   |
 | [Contabo][]      | Full support        | Well-documented           |
 | [Hostinger][]    | Full support        | Standard implementation   |
-| [Hostkey][]      | VDS only            | VPS does not suppor       |
+| [Hostkey][]      | VDS only            | VPS does not support IPv6 |
 | [RareCloud][]    | Full support        | Modern implementation     |
 | [OVH][]          | Full support        | Comprehensive support     |
 
