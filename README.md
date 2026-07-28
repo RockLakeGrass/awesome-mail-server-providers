@@ -45,7 +45,7 @@ The comparison focuses on key factors relevant to mail server operations, includ
 ## VPS and Dedicated Mail Server Provider Comparison Table
 
 > \[!NOTE]
-> [Vultr][] [Interserver][]and [Hetzner][] block port 25 by default for new accounts. Vultr and Interserver can unblock it via a support ticket request. Hetzner requires ~1 month of account history before submitting a limit request (see [#1](https://github.com/forwardemail/awesome-mail-server-providers/issues/1) and [#2](https://github.com/forwardemail/awesome-mail-server-providers/issues/2) for more details).
+> [Vultr][], [Hostkey][], [Interserver][] and [Hetzner][] block port 25 by default for new accounts. Vultr and Interserver can unblock it via a support ticket request. Hetzner requires ~1 month of account history before submitting a limit request (see [#1](https://github.com/forwardemail/awesome-mail-server-providers/issues/1) and [#2](https://github.com/forwardemail/awesome-mail-server-providers/issues/2) for more details).
 
 | Provider         | Lowest Price | RAM Range    | vCPU Range | Storage Range   | Transfer    | Reverse PTR | IPv6 | Port 25                         | Security History                      |
 | ---------------- | ------------ | ------------ | ---------- | --------------- | ----------- | ----------- | ---- | ------------------------------- | ------------------------------------- |
@@ -60,6 +60,7 @@ The comparison focuses on key factors relevant to mail server operations, includ
 | [UltaHost][]     | $3.99/mo     | 1GB-32GB+    | 1-16+      | 20GB-500GB+ SSD | 1TB-10TB+ | Yes         | Yes  | Open, 200 emails/hour limit     | No major incidents                    |
 | [Contabo][]      | €4.99/mo     | 4GB-64GB+    | 2-32+      | 50GB-1TB+ SSD   | Unlimited | Yes         | Yes  | Open, 25 emails/minute limit    | No major incidents                    |
 | [Hostinger][]    | $3.99/mo     | 1GB-32GB+    | 1-16+      | 20GB-500GB+ SSD | 1TB-10TB+ | Yes         | Yes  | Open, 5 emails/minute limit     | 2020 breach (shared hosting)          |
+| [Hostkey][]      | $2.16/mo     | 1GB-32GB+    | 1-8+       | SSD: 240GB-240GB+  <br> HDD: 1TB-4TB+ | Inbound: Unlimited <br> Outbound: 3TB+ | Yes         | VPS: No <br> VDS: Yes  | Blocked by default, can request     | No major incidents     |
 | [RareCloud][]    | $3.99/mo     | 1GB-32GB+    | 1-16+      | 25GB-500GB+ SSD | 2TB-10TB+ | Yes         | Yes  | Open by default                 | No major incidents, newer provider    |
 | [OVH][]          | $3.35/mo     | 2GB-64GB+    | 1-32+      | 20GB-1TB+ SSD   | 10TB+     | Yes         | Yes  | Open by default                 | 2021 data center fire, network outage |
 
@@ -90,6 +91,7 @@ All providers in this comparison support configurable reverse PTR records, which
 | [UltaHost][]     | Via control panel           | User-friendly interface     |
 | [Contabo][]      | Via control panel           | Well-documented             |
 | [Hostinger][]    | Via control panel           | Simple process              |
+| [Hostkey][]      | Via control panel           | Allow multiple PTR records  |
 | [RareCloud][]    | Via control panel           | Standard configuration      |
 | [OVH][]          | Via control panel           | Comprehensive documentation |
 
@@ -117,6 +119,7 @@ All providers in this comparison offer IPv6 support on all their plans, which is
 | [UltaHost][]     | Full support        | Standard implementation   |
 | [Contabo][]      | Full support        | Well-documented           |
 | [Hostinger][]    | Full support        | Standard implementation   |
+| [Hostkey][]      | VDS only            | VPS does not suppor       |
 | [RareCloud][]    | Full support        | Modern implementation     |
 | [OVH][]          | Full support        | Comprehensive support     |
 
@@ -137,6 +140,7 @@ Port 25 is the standard SMTP port used for email transmission. Many providers bl
 | [UltaHost][]     | Open by default    | 200 emails/hour      | Moderate sending limit                                          |
 | [Contabo][]      | Open by default    | 25 emails/minute     | Reasonable sending limit                                        |
 | [Hostinger][]    | Open by default    | 5 emails/minute      | Very restrictive sending limit                                  |
+| [Hostkey][]      | Blocked by default | No specific limits   | If reported as spam, server will be closed without refund                   |
 | [RareCloud][]    | Open by default    | No specific limits   | No restrictions mentioned                                       |
 | [OVH][]          | Open by default    | No specific limits   | Subject to anti-spam monitoring                                 |
 
@@ -158,6 +162,7 @@ Geographic distribution of servers is important for mail delivery speed and comp
 | [UltaHost][]     | US (2)        | DE, NL, UK             | SG         | AU        | -             | -      |
 | [Contabo][]      | US (2)        | DE (2), UK, ES         | SG, JP     | AU        | -             | -      |
 | [Hostinger][]    | US            | UK, NL, LT             | SG         | -         | BR            | -      |
+| [Hostkey][]      | US            | UK, NL, DE, FI, ES, FR, PL, CH, TR, IS, RU | - | - | - | - |
 | [RareCloud][]    | US (2)        | DE, NL                 | SG         | -         | -             | -      |
 | [OVH][]          | US, CA        | FR, UK, DE, PL, ES     | SG         | AU        | -             | -      |
 
@@ -179,6 +184,7 @@ Geographic distribution of servers is important for mail delivery speed and comp
 | [UltaHost][]     | $3.99/mo    | 1GB    | 1    | 20GB SSD | 1TB       |
 | [Contabo][]      | €4.99/mo    | 4GB    | 2    | 50GB SSD | Unlimited |
 | [Hostinger][]    | $3.99/mo    | 1GB    | 1    | 20GB SSD | 1TB       |
+| [Hostkey][]      | $2.61/mo    | 1GB    | 1    | 40GB SSD | 3TB       |
 | [RareCloud][]    | $3.99/mo    | 1GB    | 1    | 25GB SSD | 2TB       |
 | [OVH][]          | $3.35/mo    | 2GB    | 1    | 20GB SSD | 10TB      |
 
@@ -197,6 +203,7 @@ Geographic distribution of servers is important for mail delivery speed and comp
 | [UltaHost][]     | $15.99/mo       | 4GB   | 2    | 80GB SSD  | 4TB       |
 | [Contabo][]      | €8.99/mo        | 8GB   | 4    | 200GB SSD | Unlimited |
 | [Hostinger][]    | $8.99/mo        | 4GB   | 2    | 80GB SSD  | 4TB       |
+| [Hostkey][]      | $11.14/mo       | 16GB  | 8    | 160GB SSD | 3TB       |
 | [RareCloud][]    | $15.99/mo       | 4GB   | 4    | 80GB SSD  | 6TB       |
 | [OVH][]          | $13.87/mo       | 8GB   | 2    | 80GB SSD  | 10TB      |
 
@@ -218,6 +225,7 @@ Security history is a critical consideration when choosing a VPS provider for ma
 | [UltaHost][]     | None publicly reported         | Regular security updates and monitoring                                                                          |
 | [Contabo][]      | None publicly reported         | Strong reputation for security practices                                                                         |
 | [Hostinger][]    | 2020 data breach               | Affected shared hosting database, VPS services reportedly not affected                                           |
+| [Hostkey][]      | None publicly reported         | Good reputation for security                                         |
 | [RareCloud][]    | None publicly reported         | Relatively new provider with limited public security history                                                     |
 | [OVH][]          | 2021 incidents                 | Major fire at SBG2 data center; Network misconfiguration causing global outage                                   |
 
@@ -233,6 +241,8 @@ Security history is a critical consideration when choosing a VPS provider for ma
 3. **[Linode][]**: Despite past security incidents, offers reliable mail server support with open port 25 by default and excellent documentation.
 
 4.  **[Interserver][]**: Offers affordable VPS hosting with IPv6 support, reverse DNS management, and mail server–friendly infrastructure.
+
+5. **[Hostkey][]**: Affordable prices while high IP reputation, easy to manage, 24/7 technical support available.
 
 ### Best Budget Options
 
@@ -304,6 +314,8 @@ Our team uses [DataPacket][] and previously used [DigitalOcean][] and [Vultr][].
 [contabo]: https://contabo.com/en-us/?ref=forwardemail_dot_net
 
 [hostinger]: https://www.hostinger.com/?ref=forwardemail_dot_net
+
+[hostkey]: https://hostkey.com/?ref=forwardemail_dot_net
 
 [rarecloud]: https://rarecloud.io/?ref=forwardemail_dot_net
 
